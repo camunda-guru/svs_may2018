@@ -3,20 +3,30 @@
 <head>
 <script type="text/javascript" src="../node_modules/angular/angular.js">
 </script>
+<script type="text/javascript" src="../modules/homemodule.js"></script>
 <link type="text/css" rel="stylesheet" href="./styles/home.css">
 </head>
-<body>
+<body ng-app="HomeApp">
 <section class="layout">
 <header class="header">
-  <img src="">
-  <select>
+  <img src="./resources/sriramins.png" class="logo">
+  <select class="dropdown">
       <option value="admin">admin</option>
       <option value="customer">customer</option>
       <option value="developer"></option>
     </select>
 </header>
 <article class="dcontent">
-     <menu class="menu"></menu>
+     <menu class="menu">
+       <ul>
+           <li>Cohorts</li>
+           <li>Active Users</li>
+           <li>Feedback</li>
+           <li>Audit Trail</li>
+       </ul>
+
+
+     </menu>
      <article class="content"></article>
 </article>
 

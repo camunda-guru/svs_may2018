@@ -1,7 +1,7 @@
 .layout
 {
     width:80%;
-    height:400px;
+    height:600px;
     margin-left:10%;
     margin-right: 10%;
 }
@@ -9,26 +9,50 @@
 .header
 {
     width:100%;
-    height:50px;
-    border:2px solid red;
+    height:150px;
+    
 }
 .dcontent
 {
     width:100%;
     height:300px;
-    border:2px solid red;
-
+    
 }
 .menu
 {
     width:25%;
     float:left;
-    border:2px solid red;
 }
 
 .content
 {
     width:60%;
-    border:2px solid red;
     margin-left: 30%;
+}
+
+.logo
+{
+    width:25%;
+    height:100px;
+    float :left;
+}
+
+.dropdown
+{
+    width:15%;
+    margin-left: 50%;
+}
+
+ul li
+{
+    list-style-type: none;
+    font-size: 22px;
+    margin-bottom: 8%;
+    font-weight: bold;
+    text-align: center;
+}
+
+ul li:hover
+{
+    background-color: goldenrod;
 }
