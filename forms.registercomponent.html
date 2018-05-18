@@ -1,0 +1,66 @@
+<section>
+    <form [formGroup]="registerForm" (ngSubmit)="save()">
+        <label for="firstName"> First Name </label>
+        <input type="text" id="firstName"  [formControl]="firstName"  />
+        <div [hidden]="firstName.valid" class="validation">
+            <div [hidden]="!firstName.hasError('minlength')">
+               First name can not be shorter than 5 characters.
+            </div>
+            <div [hidden]="!firstName.hasError('required')">
+                First name is required.
+            </div>
+            <div [hidden]="!firstName.hasError('pattern')">
+                Not matching pattern.</div>
+
+        </div>
+        <label for="lastName"> Last Name </label>
+        <input type="text" id="lastName"   [formControl]="lastName"  />
+        <div [hidden]="lastName.valid" class="validation">
+
+            <div [hidden]="!lastName.hasError('minlength')">
+               Last name can not be shorter than 5 characters.</div>
+            <div [hidden]="!lastName.hasError('required')">
+               Last name is required.</div>
+            <div [hidden]="!lastName.hasError('pattern')">
+               Not matching pattern.</div>
+        </div>
+        <label for="dob"> DOB </label>
+        <input type="date" id="dob"   [formControl]="dob"  />
+        <div [hidden]="dob.valid" class="validation">
+            <div [hidden]="!dob.hasError('required')">
+                DOB is required.</div>
+        </div>
+        <label for="email"> Email </label>
+        <input type="email" id="email"   [formControl]="email"   />
+        <div [hidden]="email.valid" class="validation">
+
+            <div [hidden]="!email.hasError('required')">
+                Email is required.</div>
+        </div>
+
+            <label for="password">Password</label>
+            <input type="password" id="password"
+                   required
+                   [formControl]="password" name="password">
+            <div [hidden]="password.valid || password.pristine" class="validation">
+                <div [hidden]="!password.hasError('required')">
+                    Password is required.</div>
+            </div>
+
+
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password"  id="confirmPassword"
+                   required
+                   validateEqual="password"
+                   [formControl]="confirmPassword" name="confirmPassword">
+            <div [hidden]="confirmPassword.valid || confirmPassword.pristine" class="validation">
+                Passwords did not match
+            </div>
+
+
+        <input type="submit"  [disabled]="!registerForm.valid" value="Register"/>
+
+    </form>
+
+
+</section>
